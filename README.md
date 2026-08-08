@@ -54,11 +54,11 @@ Test Accuracy: 88.34%
 
 Confusion matrix:
 
-![Confusion Matrix](images/confusion_matrix.png)
+<img width="569" height="455" alt="image" src="https://github.com/user-attachments/assets/42de042d-09f8-4000-8d54-f8f44ec734b6" />
 
 Training and validation curves:
 
-![Learning Curves](images/learning_curves.png)
+<img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/de284942-c936-4fd9-96b7-b5f8f717909e" />
 
 The loss curves show training loss dropping steadily below validation loss after a few epochs, which is expected with the frozen embeddings still leaving some capacity for the GRU layers to overfit. Early stopping caught this before it went much further.
 
