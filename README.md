@@ -75,20 +75,12 @@ I ran a few reviews through the trained model by hand after evaluation, mostly t
 
 The last two are the interesting ones. "i don't like this movie" is picked up correctly as negative, but the model's confidence isn't very high (0.34), meaning it's not fully separating negation from the surrounding words with much certainty. Once "amazing" is added at the end despite the negative opener, the model flips hard to positive (0.978), which suggests it's leaning more on strong sentiment-carrying words than on parsing the negation structure of the sentence. That's a reasonable limitation for a word-embedding-based sequence model without attention, and it's a good pointer for future work.
 
-## What I'd try next
-
-- Add attention on top of the BiGRU output to see if it helps with negation cases like the ones above
-- Compare against a simple TF-IDF + Logistic Regression baseline to quantify what the deep model actually buys
-- Try unfreezing GloVe only after a few epochs of warmup instead of an all-or-nothing choice
 
 ## Project structure
 
 ```
 .
 ├── sentiment-bigru.ipynb     # full notebook: preprocessing, training, evaluation
-├── images/
-│   ├── confusion_matrix.png
-│   └── learning_curves.png
 └── README.md
 ```
 
